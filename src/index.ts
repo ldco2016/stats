@@ -13,6 +13,6 @@ const csvFileReader = new CsvFileReader("football.csv");
 const matchReader = new MatchReader(csvFileReader);
 matchReader.load();
 
-const summary = new Summary(new WinsAnalysis("Man United"), new HtmlReport());
+const summary = Summary.winsAnalysisWithHtmlReport("Man United");
 // matchReader.matches - this is the array of MatchData tuples
 summary.buildAndPrintReport(matchReader.matches);
